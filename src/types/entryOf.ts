@@ -1,0 +1,1 @@
+export type entryOf<T> = T[keyof T];

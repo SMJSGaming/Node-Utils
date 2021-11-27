@@ -1,0 +1,23 @@
+{
+  "name": "node-utils",
+  "version": "1.0.0",
+  "description": "A STD like library exporting all kinds of useful classes, types and interfaces",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "postinstall": "tsc"
+  },
+  "author": "SMJS",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SMJSGaming/Node-Utils"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.10",
+    "@types/unzipper": "^0.10.4"
+  },
+  "dependencies": {
+    "unzipper": "^0.10.11"
+  }
+}

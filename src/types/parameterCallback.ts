@@ -1,0 +1,1 @@
+export type parameterCallback<T, U> = (param: T) => U;

@@ -1,0 +1,1 @@
+export type keyList<T> = (keyof T)[];
