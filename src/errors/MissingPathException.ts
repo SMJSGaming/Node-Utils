@@ -1,4 +1,4 @@
-export class MissingPathExceptions extends Error {
+export class MissingPathException extends Error {
 
     constructor() {
         super("A required path couldn't be located");

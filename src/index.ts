@@ -7,7 +7,7 @@ export * from "./enums/Case";
 
 // Errors
 export * from "./errors/InvalidPathException";
-export * from "./errors/MissingPathExceptions";
+export * from "./errors/MissingPathException";
 export * from "./errors/OutOfBoundsException";
 
 // Gatherers
