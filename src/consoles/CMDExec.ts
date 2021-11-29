@@ -1,5 +1,5 @@
-import { exec } from "child_process";
 import { existsSync, mkdirSync, writeFileSync } from "fs";
+import { exec } from "child_process";
 import { parse } from "path";
 
 import { DevConsole } from "./DevConsole";

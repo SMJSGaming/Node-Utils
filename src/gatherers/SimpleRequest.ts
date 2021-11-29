@@ -2,9 +2,9 @@ import { createWriteStream, existsSync, writeFileSync } from "fs";
 import http, { ClientRequest, IncomingHttpHeaders } from "http";
 import https from "https";
 
-import { DevConsole } from "../consoles/DevConsole";
-import { BetterObject } from "../objects/BetterObject";
 import { JSONPrimitive } from "../types/JSONPrimitive";
+import { BetterObject } from "../objects/BetterObject";
+import { DevConsole } from "../consoles/DevConsole";
 import { urlOptions } from "../types/urlOptions";
 
 export class SimpleRequest {

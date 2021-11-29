@@ -1,5 +1,5 @@
 import { JSONArray } from "../interfaces/JSONArray";
-import { JSONObject } from "./JSONObject";
 import { JSONPrimitive } from "./JSONPrimitive";
+import { JSONObject } from "./JSONObject";
 
 export type JSONType = JSONPrimitive | JSONObject | JSONArray;

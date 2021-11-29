@@ -1,8 +1,8 @@
 import { format } from "util";
 
-import { LogInfo } from "../interfaces/LogInfo";
-import { BetterObject } from "../objects/BetterObject";
 import { parameterCallback } from "../types/parameterCallback";
+import { BetterObject } from "../objects/BetterObject";
+import { LogInfo } from "../interfaces/LogInfo";
 
 export class DevConsole {
 
