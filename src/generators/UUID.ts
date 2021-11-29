@@ -1,4 +1,4 @@
-import { networkInterfaces } from "os";
+// import { networkInterfaces } from "os";
 
 import { Comparable } from "../interfaces/Comparable";
 import { callback } from "../types/callback";
@@ -57,7 +57,7 @@ export class UUID implements Comparable<UUID> {
                 return (char == "x" ? random : random & 0x3 | 0x8).toString(0x10);
             });
         } else {
-            const macAddress = Object.values(networkInterfaces()).filter((net) => net?.[0]?.mac != "00:00:00:00:00:00")[0]?.[0]?.mac.replace(/:/g, "") || "000000000000";
+            //const macAddress = Object.values(networkInterfaces()).filter((net) => net?.[0]?.mac != "00:00:00:00:00:00")[0]?.[0]?.mac.replace(/:/g, "") || "000000000000";
 
             // TODO: Finish v1
 

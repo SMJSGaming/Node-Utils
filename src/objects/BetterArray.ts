@@ -46,9 +46,9 @@ export class BetterArray<T> extends Array<T> {
         return initialValue;
     }
 
-    public filterValue<U, Z>() {
+    /*public filterValue<U, Z>() {
         
-    }
+    }*/
 
     // TODO: Add more utilities
 }

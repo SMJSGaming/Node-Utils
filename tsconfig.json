@@ -6,8 +6,11 @@
     "strict": true,
     "declaration": true,
     "noImplicitAny": true,
+    "noUnusedLocals": true,
     "removeComments": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "src/**/*.ts"
