@@ -19,6 +19,7 @@ export * from "./generators/UUID";
 
 // Interfaces
 export * from "./interfaces/Comparable";
+export * from "./interfaces/DynamicClass";
 export * from "./interfaces/DynamicObject";
 export * from "./interfaces/JSONArray";
 
