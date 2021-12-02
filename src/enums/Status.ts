@@ -1,5 +1,5 @@
 /**
- * See the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+ * @see The [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
  */
 export enum Status {
     CONTINUE = 100,
