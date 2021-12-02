@@ -3,6 +3,7 @@ export * from "./consoles/CMDExec";
 export * from "./consoles/DevConsole";
 
 // Enums
+export * from "./enums/AcceptHeader";
 export * from "./enums/Case";
 export * from "./enums/Status";
 
