@@ -1,7 +1,7 @@
 /**
  * @see The [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
  */
-export enum AcceptHeader {
+export enum ContentType {
     // Miscellaneous
     ALL = "*/*",
     OCTET = "application/octet-stream",
