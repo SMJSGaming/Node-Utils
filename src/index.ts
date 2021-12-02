@@ -38,6 +38,7 @@ export * from "./types/JSONPrimitive";
 export * from "./types/JSONType";
 export * from "./types/callback";
 export * from "./types/entryOf";
+export * from "./types/exactEntryOf";
 export * from "./types/exclude";
 export * from "./types/keyList";
 export * from "./types/parameterCallback";

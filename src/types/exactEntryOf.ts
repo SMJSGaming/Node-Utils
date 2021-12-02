@@ -1,0 +1,1 @@
+export type exactEntryOf<T, K extends keyof T> = T[K];
