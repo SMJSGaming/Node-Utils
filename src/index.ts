@@ -4,6 +4,7 @@ export * from "./consoles/DevConsole";
 
 // Enums
 export * from "./enums/Case";
+export * from "./enums/Status";
 
 // Errors
 export * from "./errors/InvalidPathException";
