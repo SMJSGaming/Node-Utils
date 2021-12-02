@@ -4,15 +4,17 @@
 export enum AcceptHeader {
     // Miscellaneous
     ALL = "*/*",
-
-    // Text
+    OCTET = "application/octet-stream",
     PLAIN = "text/plain",
+    
+    // Text
     CSS = "text/css",
     CSV = "text/csv",
     HTML = "text/html",
     ICS = "text/calendar",
     JS = "text/javascript",
     MJS = "text/javascript",
+    TXT = "text/plain",
     
     // Audio
     AAC = "audio/aac",
