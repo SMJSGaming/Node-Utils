@@ -13,9 +13,13 @@ export class BetterObject<T> implements DynamicObject<T> {
     }
 
     public static merge<T>(target: T, ...sources: T[]): T {
-        sources.forEach((source) => 
-            BetterObject.entries(source).forEach(([key, value]) => 
-                target[key] = value));
+        sources.forEach((source) => BetterObject.entries(source).forEach(([key, value]) => target[key] = value));
+        
+        return target;
+    }
+
+    public static softMerge<T>(target: T, ...sources: T[]): T {
+        sources.forEach((source) => BetterObject.entries(source).filter(([key]) => !target[key]).forEach(([key, value]) => target[key] = value));
         
         return target;
     }
