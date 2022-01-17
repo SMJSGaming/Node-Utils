@@ -1,9 +1,9 @@
 // import { networkInterfaces } from "os";
 
-import { Comparable } from "../interfaces/Comparable";
+import { Stringifyer } from "../interfaces/Stringifyer";
 import { callback } from "../types/callback";
 
-export class UUID implements Comparable<UUID> {
+export class UUID implements Stringifyer {
 
     public static generateV1(): UUID {
         return new UUID(false);
@@ -39,10 +39,6 @@ export class UUID implements Comparable<UUID> {
 
     public setRandomAlgorithm(randomAlgorithm: callback<number>): void {
         this.randomAlgorithm = randomAlgorithm;
-    }
-
-    public compare(compareTo: UUID): boolean {
-        return this.toString() == compareTo.toString();
     }
 
     public toString(): string {

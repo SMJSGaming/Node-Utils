@@ -11,12 +11,14 @@ export * from "./enums/Status";
 export * from "./errors/InvalidPathException";
 export * from "./errors/MissingPathException";
 export * from "./errors/OutOfBoundsException";
+export * from "./errors/TimeoutException";
 
 // Gatherers
 export * from "./gatherers/SimpleRequest";
 export * from "./gatherers/Unzipper";
 
 // Generators
+export * from "./generators/Token";
 export * from "./generators/UUID";
 
 // Interfaces
@@ -24,6 +26,7 @@ export * from "./interfaces/Comparable";
 export * from "./interfaces/DynamicClass";
 export * from "./interfaces/DynamicObject";
 export * from "./interfaces/JSONArray";
+export * from "./interfaces/Stringifyer";
 
 // Manipulator
 export * from "./manipulators/ByteEditor";
