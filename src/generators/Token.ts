@@ -13,6 +13,6 @@ export class Token implements Stringifyer {
     }
 
     public toString(): string {
-        return Array(this.repeats).map(() => Math.random().toString(36).substr(2)).join("");
+        return Array(this.repeats).fill("").map(() => Math.random().toString(36).substr(2)).join("");
     }
 }
