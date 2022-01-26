@@ -1,16 +1,10 @@
-// import { networkInterfaces } from "os";
-
 import { Stringifyer } from "../interfaces/Stringifyer";
 import { callback } from "../types/callback";
 
 export class UUID implements Stringifyer {
 
-    public static generateV1(): UUID {
-        return new UUID(false);
-    }
-
-    public static generateV4(): UUID {
-        return new UUID(true);
+    public static create(): UUID {
+        return new UUID();
     }
 
     public static getVersion(uuid: UUID | string): number {
@@ -21,14 +15,11 @@ export class UUID implements Stringifyer {
         return parseInt((typeof uuid == "string" ? uuid : uuid.toString()).split("-")[3].charAt(0), 0x10);
     }
 
-    private readonly v4: boolean;
-
     private time: number;
 
     private randomAlgorithm: callback<number>;
 
-    constructor(v4: boolean = false, time: number = Date.now(), randomAlgorithm: callback<number> = Math.random) {
-        this.v4 = v4;
+    constructor(time: number = Date.now(), randomAlgorithm: callback<number> = Math.random) {
         this.time = time;
         this.randomAlgorithm = randomAlgorithm;
     }
@@ -44,20 +35,12 @@ export class UUID implements Stringifyer {
     public toString(): string {
         let timeBackup = this.time;
 
-        if (this.v4) {
-            return `xxxxxxxx-xxxx-4xxx-Nxxx-xxxxxxxxxxxx`.replace(/[xN]/g, (char) => {
-                const random = (timeBackup + this.randomAlgorithm() * 0x10) % 0x10 | 0;
+        return `xxxxxxxx-xxxx-4xxx-Nxxx-xxxxxxxxxxxx`.replace(/[xN]/g, (char) => {
+            const random = (timeBackup + this.randomAlgorithm() * 0x10) % 0x10 | 0;
 
-                timeBackup = Math.floor(timeBackup / 16);
+            timeBackup = Math.floor(timeBackup / 16);
 
-                return (char == "x" ? random : random & 0x3 | 0x8).toString(0x10);
-            });
-        } else {
-            //const macAddress = Object.values(networkInterfaces()).filter((net) => net?.[0]?.mac != "00:00:00:00:00:00")[0]?.[0]?.mac.replace(/:/g, "") || "000000000000";
-
-            // TODO: Finish v1
-
-            return "";
-        }
+            return (char == "x" ? random : random & 0x3 | 0x8).toString(0x10);
+        });
     }
 }

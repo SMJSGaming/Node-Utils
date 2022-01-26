@@ -1,6 +1,6 @@
 {
   "name": "node-utils",
-  "version": "1.1.15",
+  "version": "1.1.16",
   "description": "A STD like library exporting all kinds of useful classes, types and interfaces",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,6 @@
     "url": "https://github.com/SMJSGaming/Node-Utils"
   },
   "devDependencies": {
-    "@types/node": "^16.11.10",
     "@types/unzipper": "^0.10.4"
   },
   "dependencies": {
