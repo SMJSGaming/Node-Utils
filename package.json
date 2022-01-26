@@ -1,6 +1,6 @@
 {
-  "name": "node-utils",
-  "version": "1.1.17",
+  "name": "std-node",
+  "version": "1.2.0",
   "description": "A STD like library exporting all kinds of useful classes, types and interfaces",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
