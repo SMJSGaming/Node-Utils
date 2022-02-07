@@ -1,5 +1,3 @@
-import { JSONType } from "../types/JSONType";
-
-export interface DynamicClass<T> extends Function {
-    new (...args: JSONType[]): T
+export interface DynamicClass<T, A extends Array<any> = any[]> extends Function {
+    new (...args: A): T
 }

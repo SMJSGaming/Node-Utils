@@ -80,6 +80,14 @@ export class BetterObject<T> implements DynamicObject<T> {
         return object;
     }
 
+    public static removeProperty<T, K extends keyof T>(object: T, key: K): exactEntryOf<T, K> {
+        const reserved = object[key];
+
+        delete object[key];
+
+        return reserved;
+    }
+
     public static is<T>(object1: T, object2: T): boolean {
         const entries1 = BetterObject.entries(object1);
 

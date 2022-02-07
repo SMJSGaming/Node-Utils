@@ -8,6 +8,7 @@ export * from "./enums/ContentType";
 export * from "./enums/Status";
 
 // Errors
+export * from "./errors/CantBeConstructed";
 export * from "./errors/InvalidPathException";
 export * from "./errors/MissingPathException";
 export * from "./errors/OutOfBoundsException";
