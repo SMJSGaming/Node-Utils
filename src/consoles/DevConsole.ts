@@ -108,7 +108,7 @@ export class DevConsole {
     private static send<T, U>(logType: LogInfo<string, U | string | number>, message: T, ...params: U[]): void {
         const date = new Date();
         const output = format(`\x1b[34m%s\x1b[0m | [\x1b[%dm%s\x1b[0m]: %s`,
-            new Date(date.setMinutes(date.getMinutes() + date.getTimezoneOffset())).toLocaleString("en-GB"),
+            new Date(date.setMinutes(date.getMinutes() - date.getTimezoneOffset())).toLocaleString("en-GB"),
             logType.colorId,
             logType.name.toUpperCase(), 
             format(message, ...params))
