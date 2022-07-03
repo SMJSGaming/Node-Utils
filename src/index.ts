@@ -29,7 +29,7 @@ export * from "./interfaces/DynamicObject";
 export * from "./interfaces/JSONArray";
 export * from "./interfaces/Stringifyer";
 
-// Manipulator
+// Manipulators
 export * from "./manipulators/ByteEditor";
 export * from "./manipulators/Converter";
 

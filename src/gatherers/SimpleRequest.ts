@@ -106,10 +106,14 @@ export class SimpleRequest {
         // These checks are to make sure that we're dealing with a RequestOptions object
         // because someone decided to make that a type instead of an interface
         if (this.postData && typeof this.urlOptions != "string" && "method" in this.urlOptions && this.urlOptions.method == "POST") {
-            const stringData = typeof this.postData == "string" ? this.postData : SimpleRequest.queryParser(this.postData);
+            if (this.urlOptions.headers?.["Content-Type"] == "application/json") {
+                req.write(this.postData);
+            } else {
+                const stringData = typeof this.postData == "string" ? this.postData : SimpleRequest.queryParser(this.postData);
             
-            req.setHeader("Content-Length", stringData.length);
-            req.write(stringData);
+                req.setHeader("Content-Length", stringData.length);
+                req.write(stringData);
+            }
         }
 
         return req;
